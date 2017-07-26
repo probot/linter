@@ -10,7 +10,7 @@
     "test": "mocha && xo --extend probot"
   },
   "dependencies": {
-    "probot": "~0.6.0",
+    "probot": "github:probot/probot",
     "standard": "^10.0.2"
   },
   "devDependencies": {
