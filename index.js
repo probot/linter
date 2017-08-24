@@ -1,5 +1,5 @@
 const linter = require('./lib');
 
-module.exports = (robot) => {
+module.exports = robot => {
   robot.on('push', linter.push);
 };
