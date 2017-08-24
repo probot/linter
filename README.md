@@ -27,7 +27,6 @@ whiteList:
 globals: []  # custom global variables to declare
 plugins: []  # custom eslint plugins
 envs: []     # custom eslint environment
-parser: ''    # custom js parser (e.g. babel-eslint)
 
 ```
 
