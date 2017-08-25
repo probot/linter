@@ -1,4 +1,4 @@
-# Probot: Linter
+# Linter
 
 > a GitHub Integration built with [probot](https://github.com/probot/probot) that lints and fixes code in Pull Requests.
 
