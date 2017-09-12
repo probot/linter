@@ -1,6 +1,6 @@
 # Linter
 
-> a GitHub Integration built with [probot](https://github.com/probot/probot) that lints and fixes code in Pull Requests.
+> a GitHub App built with [probot](https://github.com/probot/probot) that lints and fixes code in Pull Requests.
 
 <img width="783" alt="screen shot 2017-07-25 at 10 08 38 pm" src="https://user-images.githubusercontent.com/13410355/28605333-ef0701d2-7185-11e7-984c-88a3ffea4c87.png">
 
