@@ -2,7 +2,7 @@ const standard = require('standard')
 
 module.exports = robot => {
   robot.on('push', async context => {
-    let filesNotToLint
+    let exclude
     const linterItems = {}
     const push = context.payload
 
@@ -17,8 +17,8 @@ module.exports = robot => {
     // Adds properties to a LinterItem object to be passed to standard.lintText()
     if (config) {
       for (const property in config) {
-        if (property === 'filesNotToLint') {
-          filesNotToLint = config[property]
+        if (property === 'exclude') {
+          exclude = config[property]
         } else {
           linterItems[property] = config[property]
         }
@@ -26,7 +26,7 @@ module.exports = robot => {
     }
 
     return Promise.all(compare.data.files.map(async file => {
-      if (!filesNotToLint.includes(file.filename)) {
+      if (!exclude.includes(file.filename)) {
         const content = await context.github.repos.getContent(context.repo({
           path: file.filename,
           ref: branch
@@ -40,7 +40,7 @@ module.exports = robot => {
           }
           return Promise.all(results.results.map(result => {
             if (result.output) {
-              // Checks that we have a fixed version and the file isn't part of the filesNotToLint list
+              // Checks that we have a fixed version and the file isn't part of the exclude list
               context.github.repos.updateFile(context.repo({
                 path: file.filename,
                 message: `Fix lint errors for ${file.filename}`,

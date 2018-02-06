@@ -2,7 +2,14 @@
   "name": "probot-linter",
   "version": "1.0.0",
   "description": "automatically lints code",
-  "author": "Bex Warner and Brandon Keepers",
+  "contributors": [
+    {
+      "name": "Bex Warner"
+    },
+    {
+      "name": "Brandon Keepers"
+    }
+],
   "license": "ISC",
   "repository": "https://github.com/probot/linter.git",
   "scripts": {

@@ -18,7 +18,7 @@
 # Configuration for linter - https://github.com/probot/linter
 
 # a list of files the linter will NOT be applied to
-filesNotToLint:
+exclude:
   - index.js
   - config.js
 
