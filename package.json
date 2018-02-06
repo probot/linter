@@ -9,7 +9,7 @@
     {
       "name": "Brandon Keepers"
     }
-],
+  ],
   "license": "ISC",
   "repository": "https://github.com/probot/linter.git",
   "scripts": {
