@@ -1,31 +1,37 @@
 {
   "name": "probot-linter",
   "version": "1.0.0",
-  "description": "{{{ description }}}",
-  "author": "{{{ author }}}",
+  "description": "automatically lints code",
+  "contributors": [
+    {
+      "name": "Bex Warner"
+    },
+    {
+      "name": "Brandon Keepers"
+    }
+  ],
   "license": "ISC",
   "repository": "https://github.com/probot/linter.git",
   "scripts": {
     "start": "probot run ./index.js",
-    "test": "mocha && xo --extend probot"
+    "test": "standard"
   },
   "dependencies": {
-    "js-yaml": "^3.9.1",
-    "probot": "github:probot/probot",
+    "probot": "^0.11.0",
     "standard": "^10.0.2"
   },
   "devDependencies": {
-    "eslint-config-probot": ">=0.1.0",
     "expect": "^1.20.2",
     "localtunnel": "^1.8.2",
-    "mocha": "^3.4.2",
-    "xo": "^0.18.0"
+    "mocha": "^3.4.2"
   },
   "engines": {
     "node": ">= 7.7.0",
     "npm": ">= 4.0.0"
   },
-  "xo": {
-    "space": true
+  "standard": {
+    "env": [
+      "mocha"
+    ]
   }
 }

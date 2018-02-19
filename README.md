@@ -17,8 +17,8 @@
 ```yml
 # Configuration for linter - https://github.com/probot/linter
 
-# a whitList of files the linter will NOT be applied to
-whiteList:
+# a list of files the linter will NOT be applied to
+exclude:
   - index.js
   - config.js
 
