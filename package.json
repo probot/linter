@@ -11,7 +11,7 @@
     }
   ],
   "license": "ISC",
-  "repository": "https://github.com/probot/linter.git",
+  "repository": "github:probot/linter",
   "scripts": {
     "start": "probot run ./index.js",
     "test": "standard"
